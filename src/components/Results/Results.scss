@@ -1,0 +1,17 @@
+section.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: auto;
+  width: min(1000px, 90%);
+  height: 100vh;
+
+  > h2 {
+    color: var(--c-neutral-200);
+    font-size: var(--fs-900);
+    font-weight: 300;
+    line-height: 1;
+    text-align: center;
+  }
+}

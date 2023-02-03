@@ -1,0 +1,27 @@
+@use '../../assets/styles/mixins.scss' as *;
+
+section.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: min(1336px, 90%);
+  height: 100vh;
+
+  figure {
+    position: relative;
+    translate: 0% -50%;
+    
+    image {
+      position: relative;
+      width: 100%;
+    }
+  }
+  
+  @include breakpoint('mobile', 'lg') {
+    justify-content: center;
+    figure {
+      translate: 0 0;
+    }
+  }
+}

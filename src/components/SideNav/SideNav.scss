@@ -1,0 +1,43 @@
+@use '../../assets/styles/mixins.scss' as *;
+
+nav.side-nav {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+
+  @include breakpoint('mobile', 'md') {
+    right: 0.5rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      width: 10px;
+      ;
+      height: 10px;
+      background-color: var(--c-neutral-100);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      &.nav-active {
+        width: 15px;
+        height: 15px;
+        background-color: var(--c-blue-400);
+      }
+
+      @include breakpoint('mobile', 'md') {
+        width: 7px;
+        height: 7px;
+
+        &.nav-active {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}
